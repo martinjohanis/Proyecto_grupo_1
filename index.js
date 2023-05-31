@@ -69,3 +69,24 @@ if (contadorUnos == contadorDos && arregloComparacion[0] == 1){
 } else if (contadorUnos == contadorDos && arregloComparacion[0] == 2){
   console.log ("sos el perro 2")
 } 
+/* valores de respuestas y suma de valores al arreglo del usuario
+
+var valRespuestas = [
+  [
+    [10,20,30,40]
+    [40,30,20,10]
+  ]
+  [
+    [20,10,20,30]
+    [-10,10,20,-20]
+  ]
+]
+
+
+function updatePersonality() {
+    
+    for (i = 0; i < respuestaUsuario.length ; i++) {
+        respuestaUsuario[i] += TempStats[i];
+    }
+}
+*/
