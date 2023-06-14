@@ -1,9 +1,11 @@
-const perroalfa[-3,-2,3,2,1]
-const perrobeta[-1,-1,2,3,-3]
+const perroalfa = [-3,-2,3,2,1]
+const perrobeta = [-1,-1,2,3,-3]
 
 console.log("quiz")
 
 var valUser = [0,0,0,0,0]
+
+var tempStats = [0,0,0,0,0]
 
 var quizActive = true
 
@@ -33,6 +35,36 @@ var answerValues = [
     ]
 ]
 
-if (quizActive){
-    questionState++
+
+
+
+
+function addValues() {
+    
+  for (i = 0; i < userStats.length ; i++) {
+      userStats[i] += tempStats[i];
+  }
 }
+
+function responder(){
+  
+  clearTempStats()
+
+  for (let i = 0; i < answerValues.length; i++) {
+    
+    resp = prompt(questionText[i])
+
+    tempStats = answerValues[i-1][resp]
+    
+    if (quizActive){
+      questionState++
+    }
+  }
+
+}
+
+function clearTempStats() {
+    
+  tempStats = [0,0,0,0,0];	
+}
+
