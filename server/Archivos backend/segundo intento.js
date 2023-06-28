@@ -1,7 +1,6 @@
 const prompt = require('prompt-sync')();
 
-const perroalfa = [-3, -2, 3, 2, 1]
-const perrobeta = [-1, -1, 2, 3, -3]
+const perros = [10,-10]
 
 console.log("quiz")
 
@@ -37,10 +36,11 @@ let answerValues = [
 function main(){
   for(let i = 0; i < questionText.length; i++){
     console.log("asfdasf")
-    responder()
+    obtenerResp(i)
     addValues()
     console.log(valUser)
   }
+  sumarValUser(valUser)
 }
 
 
@@ -51,19 +51,18 @@ function addValues() {
   }
 }
 
-function responder(){
+function obtenerResp(i){
   
   clearTempStats()
-
-  for (let i = 0; i < questionText.length; i++) {
     
-    const resp = prompt(questionText[i]);
+  const resp = prompt(questionText[i]);
 
-    tempStats = answerValues[i-1],[resp]
-    
-    if (quizActive){
-      questionState++
-    }
+  for (val = 0; val < tempStats.length ; val++) {
+    tempStats[val] = answerValues[i][resp-1][val]
+  }
+  
+  if (quizActive){
+    questionState++
   }
 
 }
@@ -71,6 +70,15 @@ function responder(){
 function clearTempStats() {
     
   tempStats = [0,0,0,0,0];	
+}
+
+function sumarValUser (valUser){
+
+  const suma = valUser.reduce((accumulator, value) => {
+    return accumulator + value;
+  }, 0);
+  
+  console.log(suma);
 }
 
 main()
