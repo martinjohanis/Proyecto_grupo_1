@@ -1,6 +1,8 @@
 const prompt = require('prompt-sync')();
 
-const perros = [10,-10]
+const perros = [[7,-3,2,0,1],
+                [0,2,3,8,-4],
+                [1,-2,-3,6,2]]
 
 console.log("quiz")
 
@@ -70,6 +72,14 @@ function obtenerResp(i){
 function clearTempStats() {
     
   tempStats = [0,0,0,0,0];	
+}
+
+function compareElements(valUser,perros){
+//doble for .primer for (perros.length). segundo for (valUser.length)
+for(let i = 0; i < perros.length; i++){
+
+}
+
 }
 
 function sumarValUser (valUser){
