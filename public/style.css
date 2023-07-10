@@ -84,3 +84,9 @@ h2{
     height: 65%;
     margin-top: 5%;
 }
+
+.botonesop{
+
+    display: block;
+    position: absolute;
+}

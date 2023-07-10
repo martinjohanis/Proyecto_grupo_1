@@ -58,7 +58,7 @@ function addValues() {
   }
 }
 
-function obtenerResp(i){
+/*function obtenerResp(i){
   
   clearTempStats()
     
@@ -72,7 +72,7 @@ function obtenerResp(i){
     questionState++
   }
 
-}
+} */
 
 function calcularDistancia(perros, valUser) {  // calcula las distancias entre cada subarreglo y el valUser
   
