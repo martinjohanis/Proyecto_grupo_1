@@ -16,7 +16,7 @@ app.post('/greet', (req, res) => {
 
   res.json({greeting});
 
-
+  console.log("tumamam")
   // Código para obtener el saludo usando los datos guardados en la BBDD
   // Ustedes deben reemplazar este código por el suyo, según las necesidades de su aplicación
   /* 

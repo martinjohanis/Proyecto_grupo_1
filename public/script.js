@@ -1,11 +1,11 @@
-const submitBtn = document.getElementById('submitBtn');
-const nameInput = document.getElementById('nameInput');
-const outputDiv = document.getElementById('output');
+const btnradio1 = document.getElementById('btnradio1');
+//const nameInput = document.getElementById('nameInput');
+//const outputDiv = document.getElementById('output');
 
 // Agrega un listener al botón de submit para que cuando se haga click se envíe el nombre ingresado al servidor
-submitBtn.addEventListener('click', () => {
-  const name = nameInput.value; // Obtiene el nombre ingresado en el input
-
+btnradio1.addEventListener('click', () => {
+  //const name = nameInput.value; // Obtiene el nombre ingresado en el input
+  const name = "NOMBRE"
   fetch('/greet', { // Envía el nombre ingresado al servidor mediante una petición POST
     method: 'POST',
     headers: {
