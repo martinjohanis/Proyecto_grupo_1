@@ -37,7 +37,6 @@ let answerValues = [
 
 function main(){
   for(let i = 0; i < questionText.length; i++){
-    console.log("asfdasf")
     obtenerResp(i)
     addValues()
     console.log(valUser)
@@ -92,11 +91,6 @@ function calcularDistancia(perros, valUser) {  // calcula las distancias entre c
   let menorDistancia = perros[indiceMenorDistancia];
   let perroMenorDistancia = nombres[indiceMenorDistancia];
   return { subarreglo: menorDistancia, perro: perroMenorDistancia };
-}
-
-function clearTempStats() {
-    
-  tempStats = [0,0,0,0,0];	
 }
 
 main()
