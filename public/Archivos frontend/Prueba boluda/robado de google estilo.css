@@ -228,7 +228,7 @@ html {
   .lame h1 {
       font-size: 2em;
       animation: blinker 0.5s linear infinite;
-      font-family:;
+      font-family:serif;
   }
    @keyframes blinker {
    50% {
