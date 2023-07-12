@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    
+   
 
 
 </head>
 
 <body class="body">
-    
+   
 <div class="contenedor1">
     <h1 id="titulo">16dogs</h1>
     <div><p class="menu">test de personalidad</p>
@@ -23,39 +23,10 @@
 </div>
 <div id="texto1">
     <h2> Nuestros lectores dicen que 16dogs es tan preciso que, “es un poco espeluznante”. </h2>
-   <h3> <small class="text-body-secondary"> Obtén una descripción concreta y precisa sobre la raza de perro que mas coincide con tu personalidad. </small></h3> 
-   <button type="button" id="submitBtn" class="btn btn-outline-secondary" id="inicio"><h4>Comienza el test!</h4></button>
+   <h3> <small class="text-body-secondary"> Obtén una descripción concreta y precisa sobre la raza de perro que mas coincide con tu personalidad. </small></h3>
+   <button type="button" id="submitBtn" onclick="click_boton_comenzar()" class="btn btn-outline-secondary" id="inicio"><h4>Comienza el test!</h4></button>
 
-   <div class="botonesop">
-   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <h4> Te gusta mas salir o quedarte en tu casa</h4>
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-    <label class="btn btn-outline-primary" for="btnradio1">opcion 1</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio2">opcion 2</label>
-  </div>
-
-  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <h4> Te gusta mas salir o quedarte en tu casa</h4>
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
-    <label class="btn btn-outline-primary" for="btnradio3">opcion 1</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio4">opcion 2</label>
-  </div>
-
-  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <h4> Te gusta mas salir o quedarte en tu casa</h4>
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked>
-    <label class="btn btn-outline-primary" for="btnradio5">opcion 1</label>
-  
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio6">opcion 2</label>
-  </div>
-  
-
-  </div>
+ 
 </div>
 
 
@@ -106,6 +77,45 @@
     aaaa
 </div>
 <script src="script.js"> </script>
+<script>
+
+function click_boton_comenzar()
+{
+    //alert("hola kai como estas?")
+    document.getElementById("texto1").innerHTML=""
+    document.getElementById("texto1").innerHTML=`  <div class="botonesop" id="botonesop">
+   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <h4> Te gusta mas salir o quedarte en tu casa</h4>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio1">opcion 1</label>
+ 
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">opcion 2</label>
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <h4> Te gusta mas salir o quedarte en tu casa</h4>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio3">opcion 1</label>
+ 
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio4">opcion 2</label>
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <h4> Te gusta mas salir o quedarte en tu casa</h4>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio5">opcion 1</label>
+ 
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio6">opcion 2</label>
+  </div>
+ 
+
+  </div>
+  <button type="button" class="btn btn-outline-secondary">Comporba tus resultados</button>`
+}
+</script>
 
 </body>
 </html>
