@@ -13,7 +13,7 @@ let perro3 = {
   raza: "Weimaraner",
   values: [0,0,0,0,0], 
 }
-let dogs = [perro1, perro2, perro3]//valores perros(perro = [indice.values])
+let perros = [perro1, perro2, perro3]//valores perros(perro = [indice.values])
 
 
 
@@ -46,6 +46,7 @@ let answerValues = [
 ]
 
 function main(){
+  guardarRespuestas()
   for(let i = 0; i < questionText.length; i++){
     addValues()
     console.log(valUser)
@@ -63,6 +64,24 @@ function addValues() {
     
   for (i = 0; i < valUser.length ; i++) {
       valUser[i] += tempStats[i];
+  }
+}
+
+function guardarRespuestas() {
+
+  let respuestas = [];
+
+  const opcionesArr = document.querySelectorAll('input[type="radio"]:checked');
+
+  if (opcionesArr.length === answerValues.length) {
+    opcionesArr.forEach((opcionSeleccionada, index) => {
+      respuestas.push(answerValues[index][opcionSeleccionada.value]);
+    });
+
+    console.log(respuestas); // respuestas seleccionadas por el usuario
+
+  } else {
+    alert("Debes seleccionar una opción para cada pregunta.");
   }
 }
 
