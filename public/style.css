@@ -90,3 +90,7 @@ h2{
     display: block;
     position: absolute;
 }
+
+a{
+    text-decoration: none;
+}

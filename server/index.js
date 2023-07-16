@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 3000; // Puerto de la APP Web
-const prompt = require('prompt-sync')();
 
 // Perros
 let perro1 = {
@@ -42,12 +41,14 @@ app.use(express.json());  // Indica que se usarán datos en formato JSON en las 
 // Ruta para obtener el saludo, recibe el nombre en el body de la petición y devuelve el saludo en formato JSON
 app.post('/obtenerPerro', (req, res) => { 
 
-  const respuestas = req.body
+  const {respuestas} = req.body
 
-  guardarRespuestas()
+  guardarRespuestas(respuestas)
   
   console.log(respuestas)
   
+  addValues()
+
   console.log("tumamam")
 
 
@@ -56,7 +57,7 @@ app.post('/obtenerPerro', (req, res) => {
     addValues()
   }*/
 
-  const resultado = calcularDistancia(perros, valUser);
+  let resultado = calcularDistancia(perros, valUser);
   const menorDistancia = resultado.subarreglo;
   const perroMenorDistancia = resultado.perro;
 
@@ -69,25 +70,13 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
 
-app.get('/',function(req,res){
-  res.set({
-      'perroResp': '*'
-      });
-  return res.redirect('index.html');
-  }).listen(3000)
-
-  
 function guardarRespuestas() {
 
-  const respuestasUser = document.querySelectorAll('input[type="radio"]:checked');
-
-  if (respuestasUser.length === answerValues.length) {
-    respuestasUser.forEach((respuestas, index) => {
+  if (respuestas.length === answerValues.length) {
+    respuestas.forEach((respuestas, index) => {
       respuestas.push(answerValues[index][respuestas.value]);
     });
-
-    console.log(respuestas); // respuestas seleccionadas por el usuario
-
+    // respuestas seleccionadas por el usuario
   } else {
     alert("Debes seleccionar una opción para cada pregunta.");
   }
@@ -96,7 +85,7 @@ function guardarRespuestas() {
 function addValues() {
   for (let i = 0; i < answerValues.length ; i++) {
    for (let j = 0; j < valUser.length ; j++) {
-       valUser[j] += answerValues[i][opcionesArr[i]-1][j];
+       valUser[j] += answerValues[i][respuestas[i]-1][j];
    }
   }
 }

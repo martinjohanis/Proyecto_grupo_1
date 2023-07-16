@@ -2,34 +2,7 @@ const btnradio1 = document.getElementById('btnradio1');
 const outputDiv = document.getElementById('output');
 //const nameInput = document.getElementById('nameInput');
 //const outputDiv = document.getElementById('output');
-const respuestasUser = [];
-
-function enviarResp() {
-  const form = document.getElementById('myForm');
-
-  console.log(form);
-  
-  const elements = form.querySelectorAll('input, select'); //obtiene todos los elementos del formulario
-
-
-
-  elements.forEach(element => {
-    if (element.type === 'checkbox' || element.type === 'radio') {
-      if (element.checked) {
-        respuestasUser.push(element.value);
-      }
-    } else {
-      respuestasUser.push(element.value);
-    }
-  });
-
-  if (respuestasUser.length !== answerValues.length) {
-    alert("Seleccionar una opción en todas las preguntas");
-  }
-
-  console.log(respuestasUser);
-}
-
+const respuestas = [];
 
 function click_boton_comenzar()
 {
@@ -88,13 +61,35 @@ function click_boton_comenzar()
   }
 
 
+  function enviarResp() {
+    
+    const elements = document.querySelectorAll('input[type="radio"]:checked'); //obtiene todos los elementos del formulario
+  
+    elements.forEach(element => {
+      if (element.type === 'checkbox' || element.type === 'radio') {
+        if (element.checked) {
+          respuestas.push(element.value);
+        }
+      } else {
+        respuestas.push(element.value);
+      }
+    });
+  
+    if (respuestas.length !== 3) {
+      alert("Seleccionar una opción en todas las preguntas");
+    }
+  
+    console.log(respuestas);
+  }
+  
+
 // Agrega un listener al botón de submit para que cuando se haga click se envíe el nombre ingresado al servidor
 submitBtn.addEventListener('click', () => {
   //const name = nameInput.value; // Obtiene el nombre ingresado en el input
 
   fetch('/obtenerPerro', {
     method: 'POST',
-    body: JSON.stringify({ respuestasUser }),
+    body: JSON.stringify({ respuestas }),
     headers: {
       'Content-Type': 'application/json'
     }
