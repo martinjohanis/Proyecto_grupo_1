@@ -41,7 +41,9 @@ app.use(express.json());  // Indica que se usarán datos en formato JSON en las 
 // Ruta para obtener el saludo, recibe el nombre en el body de la petición y devuelve el saludo en formato JSON
 app.post('/obtenerPerro', (req, res) => { 
 
-  const {respuestas} = req.body
+  var respuestas = req.body
+
+  console.log(respuestas)
 
   guardarRespuestas(respuestas)
   
@@ -70,7 +72,7 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
 
-function guardarRespuestas() {
+function guardarRespuestas(respuestas) {
 
   if (respuestas.length === answerValues.length) {
     respuestas.forEach((respuestas, index) => {

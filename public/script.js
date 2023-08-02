@@ -2,7 +2,7 @@ const btnradio1 = document.getElementById('btnradio1');
 const outputDiv = document.getElementById('output');
 //const nameInput = document.getElementById('nameInput');
 //const outputDiv = document.getElementById('output');
-const respuestas = [];
+
 
 function click_boton_comenzar()
 {
@@ -13,10 +13,10 @@ function click_boton_comenzar()
       <h4> Te gusta mas la 1 o la 2?</h4>
       
       
-      <input type="radio" class="btn-check1" name="btnradio1" id="btnradio1" autocomplete="off" checked>
+      <input type="radio" class="btn-check1" name="btnradio1" id="btnradio1" value= 1 autocomplete="off" checked>
       <label class="btn btn-outline-primary1" for="btnradio1">opcion 1</label>
    
-      <input type="radio" class="btn-check1" name="btnradio1" id="btnradio2" autocomplete="off">
+      <input type="radio" class="btn-check1" name="btnradio1" id="btnradio2" value= 2 autocomplete="off">
       <label class="btn btn-outline-primary1" for="btnradio1">opcion 2</label>
     </div>
     </div>
@@ -27,10 +27,10 @@ function click_boton_comenzar()
       <h4> Te gusta mas la 1 o la 2?</h4>
       
       
-      <input type="radio" class="btn-check2" name="btnradio2" id="btnradio3" autocomplete="off" checked>
+      <input type="radio" class="btn-check2" name="btnradio2" id="btnradio3" value= 1 autocomplete="off" checked>
       <label class="btn btn-outline-primary2" for="btnradio2">opcion 1</label>
    
-      <input type="radio" class="btn-check2" name="btnradio2" id="btnradio4" autocomplete="off">
+      <input type="radio" class="btn-check2" name="btnradio2" id="btnradio4" value= 2 autocomplete="off">
       <label class="btn btn-outline-primary2" for="btnradio2">opcion 2</label>
     </div>
     </div>
@@ -41,28 +41,20 @@ function click_boton_comenzar()
       <h4> Te gusta mas la 1 o la 2?</h4>
       
       
-      <input type="radio" class="btn-check3" name="btnradio3" id="btnradio5" autocomplete="off" checked>
+      <input type="radio" class="btn-check3" name="btnradio3" id="btnradio5" value=1 autocomplete="off" checked>
       <label class="btn btn-outline-primary3" for="btnradio3">opcion 1</label>
    
-      <input type="radio" class="btn-check3" name="btnradio3" id="btnradio6" autocomplete="off">
+      <input type="radio" class="btn-check3" name="btnradio3" id="btnradio6" value=2 autocomplete="off">
       <label class="btn btn-outline-primary3" for="btnradio3">opcion 2</label>
     </div>
     </div>
   
-    <button type="button" id="submitBtn" onclick="click_boton_finalizar()" class="btn btn-outline-secondary"><h4>Descubre tu resultado!</h4></button>
+    <button type="button" id="submitBtn" onclick="obtenerResp()" class="btn btn-outline-secondary"><h4>Descubre tu resultado!</h4></button>
   `
   }
 
-  
-  function click_boton_finalizar()
-  {
-      alert("hola kai como estas?")
-      document.getElementById("submitBtn").innerHTML= enviarResp()
-  }
-
-
-  function enviarResp() {
-    
+  function obtenerResp() {
+    var respuestas = [];
     const elements = document.querySelectorAll('input[type="radio"]:checked'); //obtiene todos los elementos del formulario
   
     elements.forEach(element => {
@@ -80,12 +72,18 @@ function click_boton_comenzar()
     }
   
     console.log(respuestas);
+    return respuestas
   }
   
 
 // Agrega un listener al botón de submit para que cuando se haga click se envíe el nombre ingresado al servidor
 submitBtn.addEventListener('click', () => {
   //const name = nameInput.value; // Obtiene el nombre ingresado en el input
+  
+  obtenerResp()
+
+  console.log("Enviar")
+  console.log(respuestas)
 
   fetch('/obtenerPerro', {
     method: 'POST',
