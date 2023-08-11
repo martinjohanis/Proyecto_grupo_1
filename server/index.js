@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express();
+var app = express();
 const port = 3000; // Puerto de la APP Web
 
 // Perros
@@ -43,13 +43,14 @@ app.post('/obtenerPerro', (req, res) => {
 
   var respuestas = req.body
 
+  console.log("chauuu")
   console.log(respuestas)
 
   guardarRespuestas(respuestas)
   
-  console.log(respuestas)
+  console.log("hollaaa")
   
-  addValues()
+  addValues(respuestas)
 
   console.log("tumamam")
 
@@ -80,7 +81,7 @@ function guardarRespuestas(respuestas) {
     });
     // respuestas seleccionadas por el usuario
   } else {
-    alert("Debes seleccionar una opción para cada pregunta.");
+    console.log("Debes seleccionar una opción para cada pregunta.");
   }
 }
 
