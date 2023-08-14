@@ -22,15 +22,28 @@ let valUser = [0,0,0,0,0]
 let answerValues = [
   [ //preg 1
     [2,0,-1,3,0],   //opcion 1
-    [-1,-2,-3,0,0]  //opcion 2
+    [-1,-2,-3,0,0],  //opcion 2
+    [1,2,3,3,3]     //opcion 3
   ],
   [ //preg 2
     [3,0,-3,-2,1],  //opcion 1
-    [0,0,1,2,-3]    //opcion 2
+    [0,0,1,2,-3],   //opcion 2
+    [0,0,0,1,2]    
   ],
   [ //preg 3
     [1,3,3,0,0],    //opcion 1
-    [2,2,0,1,0]     //opcion 2
+    [2,2,0,1,0],     //opcion 2
+    [3,3,2,1,2]     //opcion 3
+  ],
+  [ //preg 4
+    [1,3,3,0,0],    //opcion 1
+    [2,2,0,1,0],     //opcion 2
+    [3,3,2,1,2]     //opcion 3
+  ],
+  [ //preg 5
+    [1,3,3,0,0],    //opcion 1
+    [2,2,0,1,0],     //opcion 2
+    [3,3,2,1,2]     //opcion 3
   ]
 ]
 
@@ -45,8 +58,6 @@ app.post('/obtenerPerro', (req, res) => {
 
   console.log("chauuu")
   console.log(respuestas)
-
-  guardarRespuestas(respuestas)
   
   console.log("hollaaa")
   
@@ -85,7 +96,7 @@ function guardarRespuestas(respuestas) {
   }
 }
 
-function addValues() {
+function addValues(respuestas) {
   for (let i = 0; i < answerValues.length ; i++) {
    for (let j = 0; j < valUser.length ; j++) {
        valUser[j] += answerValues[i][respuestas[i]-1][j];
@@ -109,6 +120,6 @@ function calcularDistancia(perros, valUser) {  // calcula las distancias entre c
   let indiceMenorDistancia = distancias.indexOf(Math.min(...distancias));  
   // encuentra el subarreglo con el numero mas bajo en las sumas de distancias
   let menorDistancia = perros[indiceMenorDistancia].values;
-  let perroMenorDistancia = nombres[indiceMenorDistancia].raza;
+  let perroMenorDistancia = perros[indiceMenorDistancia].raza;
   return { subarreglo: menorDistancia, perro: perroMenorDistancia };
 }

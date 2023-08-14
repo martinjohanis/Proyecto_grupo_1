@@ -1,7 +1,6 @@
 const btnradio1 = document.getElementById('btnradio1');
 const outputDiv = document.getElementById('output');
-const startBtn = document.getElementById('startBtn');
-const submitBtn = document.getElementById('sumbitBtn');
+const submitBtn = document.getElementById('submitBtn');
 //const nameInput = document.getElementById('nameInput');
 
 
@@ -117,7 +116,6 @@ const submitBtn = document.getElementById('sumbitBtn');
         }
     });
   
-    console.log(respuestas);
     return respuestas
   }
   
@@ -136,7 +134,7 @@ submitBtn.addEventListener('click', () => {
 
   fetch('/obtenerPerro', {
     method: 'POST',
-    body: JSON.stringify({ respuestas }),
+    body: JSON.parse( respuestas ),
     headers: {
       'Content-Type': 'application/json'
     }
@@ -149,8 +147,4 @@ submitBtn.addEventListener('click', () => {
   .catch(error => {
     console.error('Error:', error);
   });
-});
-
-startBtn.addEventListener('click', () => {
- 
 });
