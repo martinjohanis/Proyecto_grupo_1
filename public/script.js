@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const btnradio1 = document.getElementById('btnradio1');
 const outputDiv = document.getElementById('output');
 const submitBtn = document.getElementById('submitBtn');
@@ -134,14 +136,17 @@ submitBtn.addEventListener('click', () => {
 
   fetch('/obtenerPerro', {
     method: 'POST',
-    body: JSON.parse( respuestas ),
+    body: JSON.stringify( respuestas ),
     headers: {
       'Content-Type': 'application/json'
     }
   })
   .then(response => response.json())
   .then(data => {
-    outputDiv.textContent = data.resultado;
+
+    console.log(res.body)
+    //console.log(data.resultado.perro + "esto quiero ver ")
+    //outputDiv.textContent = data.resultado;
   })
 
   .catch(error => {

@@ -36,14 +36,14 @@ let answerValues = [
     [3,3,2,1,2]     //opcion 3
   ],
   [ //preg 4
-    [1,3,3,0,0],    //opcion 1
-    [2,2,0,1,0],     //opcion 2
-    [3,3,2,1,2]     //opcion 3
+    [2,0,-1,3,0],   //opcion 1
+    [-1,-2,-3,0,0],  //opcion 2
+    [1,2,3,3,3]     //opcion 3
   ],
   [ //preg 5
-    [1,3,3,0,0],    //opcion 1
-    [2,2,0,1,0],     //opcion 2
-    [3,3,2,1,2]     //opcion 3
+    [2,0,-1,3,0],   //opcion 1
+    [-1,-2,-3,0,0],  //opcion 2
+    [1,2,3,3,3]     //opcion 3
   ]
 ]
 
@@ -60,18 +60,17 @@ app.post('/obtenerPerro', (req, res) => {
   console.log(respuestas)
   
   console.log("hollaaa")
-  
-  addValues(respuestas)
-
-  console.log("tumamam")
-
-
 
   /*for(let i = 0; i < valUser.length; i++){
     addValues()
   }*/
 
-  let resultado = calcularDistancia(perros, valUser);
+  let resultado = calcularDistancia(perros, addValues(respuestas));
+
+  console.log("tumamam")
+
+  console.log(resultado)
+
   const menorDistancia = resultado.subarreglo;
   const perroMenorDistancia = resultado.perro;
 
@@ -102,6 +101,7 @@ function addValues(respuestas) {
        valUser[j] += answerValues[i][respuestas[i]-1][j];
    }
   }
+  return valUser
 }
 
 function calcularDistancia(perros, valUser) {  // calcula las distancias entre cada subarreglo y el valUser
