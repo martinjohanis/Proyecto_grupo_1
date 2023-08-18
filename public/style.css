@@ -1,8 +1,8 @@
-.body{
+body{
     background-color: rgb(160, 107, 64)
 }
 .contenedor1{
-    margin-bottom: 5%;
+    margin-top: 1%;
     box-shadow: 5px 5px 5px  rgb(75, 75, 75);
     background-image: url(https://www.shutterstock.com/image-vector/dog-paw-seamless-pattern-vector-260nw-1405992047.jpg);
     
@@ -16,6 +16,7 @@
     
     
 }
+
 h1{
 font-family: american typewriter, serif;;
 background-color:rgb(236, 195, 163);
@@ -41,7 +42,7 @@ border-radius: 3em;
     background-color:rgb(253, 187, 112);
     /*padding-left: 150ex;*/
     box-shadow: 7px 7px 7px  rgb(75, 75, 75);
-    margin-bottom: 2%;
+    margin-top: 15%;
     padding-bottom: 5ex;
     min-height: 75ex;
     margin-top: 2ex;
@@ -93,4 +94,8 @@ h2{
 
 a{
     text-decoration: none;
+}
+.navbar{
+
+    width: 100%;
 }
