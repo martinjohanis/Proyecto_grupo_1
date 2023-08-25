@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const btnradio1 = document.getElementById('btnradio1');
 const outputDiv = document.getElementById('output');
 const submitBtn = document.getElementById('submitBtn');
@@ -141,12 +139,16 @@ submitBtn.addEventListener('click', () => {
       'Content-Type': 'application/json'
     }
   })
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
+    console.log("Tu perro elegido ha sido: "+data.resultado)
+    let html =""
 
-    console.log(res.body)
-    //console.log(data.resultado.perro + "esto quiero ver ")
-    //outputDiv.textContent = data.resultado;
+    html +="<div id='' style='padding:5ex; border: 1px solid black; width: 100%;'>"
+    html+=data.resultado
+    html +="</div>"
+
+    document.getElementById("texto1").innerHTML= html
   })
 
   .catch(error => {
