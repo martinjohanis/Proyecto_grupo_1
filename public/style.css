@@ -1,96 +1,145 @@
-.body{
-    background-color: rgb(160, 107, 64)
+* Reset de estilos para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.contenedor1{
-    margin-bottom: 5%;
-    box-shadow: 5px 5px 5px  rgb(75, 75, 75);
-    background-image: url(https://www.shutterstock.com/image-vector/dog-paw-seamless-pattern-vector-260nw-1405992047.jpg);
-    
-    background-color: rgb(253, 187, 112);
-    display: flex;
-    justify-content: space-between ;
-    padding-left: 20px;
-    padding-right: 80px
-    
 
-    
-    
+#body {
+    font-family: Arial, sans-serif;
+    background-color: #ffd0a9;
+    color:#ffd0a9 ;
 }
-h1{
-font-family: american typewriter, serif;;
-background-color:rgb(236, 195, 163);
-font-size: 30px;
 
-border-radius: 3em;
-
-}
-.menu{
-
-background-color: rgb(236, 195, 163);
-font-size: 25px;
-/*line-height: 7px;*/
-font-family: 'Script';
-border-radius: 3em;
-
-
+header {
+    background-color:  #fcbe8c;
+    color: #945019;
+    padding: 10px 0;
+    border-color: #333;
+    /*border-bottom: 2px solid #333 ;
+    border-top: 2px solid #333 ;
+    border-right: 2px solid #333 ;
+    border-left: 2px solid #333 ;*/
+    border-bottom-right-radius: 30px #333 ;
+    border-top-left-radius: 30px #333;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
 
 }
-#texto1{
 
-    color: black;
-    background-color:rgb(253, 187, 112);
-    /*padding-left: 150ex;*/
-    box-shadow: 7px 7px 7px  rgb(75, 75, 75);
-    margin-bottom: 2%;
-    padding-bottom: 5ex;
-    min-height: 75ex;
-    margin-top: 2ex;
-    padding-left: 2ex;
-    padding-right: 1ex;
-    border-radius: 3em;
+header h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav ul {
+    list-style: none;
     text-align: center;
-    background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/job562-nunoon-04-g-kl61yopv.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=c83babaf0d005f8a38aea6126d720763);
+   
+   
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
     
-    
-    
-}
-h1{
-    font-size: 55px;
-}
-h2{ 
-    font-size: 30px ;
-
-}
-#inicio{
-    font-size: 15px ;
-    margin-top: 5%;
-    border-radius: 3em;
-
-}
-#redes{
-
-    border: 2px solid black;
-    background-color: rgb(253, 187, 112);
-  border-radius: 3em;
-  margin-top: 4%;
-
 }
 
+nav a {
+    text-decoration: none;
+    color: #945019;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.landing {
+    text-align: center;
+    padding: 100px 0;
+    color: #945019;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.landing h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #945019;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}*/
+
+#botonesop1 {
+
+    margin-top: 1%;
+
+
+}
+
+.btn-group1{
+
+    padding-bottom: 20px;
+}
+
+.btn-group2{
+
+    padding-bottom: 20px;    
+
+}
+
+.btn-group3{
+
+    padding-bottom: 20px;    
+
+}.btn-group4{
+
+    padding-bottom: 20px;    
+
+}.btn-group5{
+
+    padding-bottom: 20px;    
+
+}
+
+#submitBtn{
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #945019;;
+    color: #fcbe8c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+footer {
+    text-align: center;
+    background-color: #fcbe8c;
+    color: #945019;
+    padding: 10px 0;
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+   
+}
 .imagenes{
    
     border-radius: 2em;
     object-fit: cover;
     width: 100%;
     height: 65%;
-    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
-.botonesop{
+.texto{
+color: #945019;
+font-family: 'Quicksand', sans-serif;
 
-    display: block;
-    position: absolute;
-}
-
-a{
-    text-decoration: none;
 }
