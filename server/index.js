@@ -21,29 +21,29 @@ let valUser = [0,0,0,0,0]
 
 let answerValues = [
   [ //preg 1
-    [2,0,-1,3,0],   //opcion 1
-    [-1,-2,-3,0,0],  //opcion 2
-    [1,2,3,3,3]     //opcion 3
+    [2,1,3,3,2],   //opcion 1
+    [-3,-2,0,2,3],  //opcion 2
+    [2,-2,-1,-2,-3]     //opcion 3
   ],
   [ //preg 2
-    [3,0,-3,-2,1],  //opcion 1
-    [0,0,1,2,-3],   //opcion 2
-    [0,0,0,1,2]    
+    [2,1,3,3,2],   //opcion 1
+    [-3,-2,0,2,3],  //opcion 2
+    [2,-2,-1,-2,-3]     //opcion 3
   ],
   [ //preg 3
-    [1,3,3,0,0],    //opcion 1
-    [2,2,0,1,0],     //opcion 2
-    [3,3,2,1,2]     //opcion 3
+    [2,1,3,3,2],   //opcion 1
+    [-3,-2,0,2,3],  //opcion 2
+    [2,-2,-1,-2,-3]     //opcion 3
   ],
   [ //preg 4
-    [2,0,-1,3,0],   //opcion 1
-    [-1,-2,-3,0,0],  //opcion 2
-    [1,2,3,3,3]     //opcion 3
+    [2,1,3,3,2],   //opcion 1
+    [-3,-2,0,2,3],  //opcion 2
+    [2,-2,-1,-2,-3]     //opcion 3
   ],
   [ //preg 5
-    [2,0,-1,3,0],   //opcion 1
-    [-1,-2,-3,0,0],  //opcion 2
-    [1,2,3,3,3]     //opcion 3
+    [2,1,3,3,2],   //opcion 1
+    [-3,-2,0,2,3],  //opcion 2
+    [2,-2,-1,-2,-3]     //opcion 3
   ]
 ]
 
@@ -75,6 +75,9 @@ app.post('/obtenerPerro', (req, res) => {
   const perroMenorDistancia = resultado.perro;
 
   res.json({ resultado: resultado.perro });
+
+  respuestas = 0;
+  valUser = [0,0,0,0,0];
 
 });
 
