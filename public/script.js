@@ -40,10 +40,26 @@ submitBtn.addEventListener('click', () => {
   .then(data => {
     console.log("Tu perro elegido ha sido: "+data.resultado)
     let html =""
-
-    html +="<div id='' style='padding:5ex; border: 1px solid black; width: 100%;'>"
+    html+="<div class='menu_respuesta'>"
+    html +="<div id='Resultado-perruno'>"
+    html+="Tu perro es "
     html+=data.resultado
     html +="</div>"
+    if(data.resultado == "Border Collie"){
+      html+="<img src ='imagenes/bordercollie.jpg' class='Imgs-perros'>"
+      html+= "<button type='button' class='btn btn-outline-success Botones_Resultado'>Mas informacion</button>"
+    }
+    else if(data.resultado == "Golden Retriever"){
+      html+="<img src ='imagenes/golden-retriever.jpg' class='Imgs-perros'>"
+      html+= "<button type='button' class='btn btn-outline-success Botones_Resultado'>Mas informacion</button>"
+    }
+    else if(data.resultado == "Weimaraner"){
+      html+="<img src ='imagenes/weimaraner.jpg' class='Imgs-perros'>"
+      html+= "<button type='button' class='btn btn-outline-success Botones_Resultado'>Mas informacion</button>"
+    }
+    html+="</div>"
+    
+
 
     document.getElementById("texto1").innerHTML= html
   })

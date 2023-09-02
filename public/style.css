@@ -150,3 +150,19 @@ font-family: 'Quicksand', sans-serif;
 {
     color: #945019 !important;
 }
+#Resultado-perruno{
+    color: #945019;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 5%;
+    font-size: 70px;vscode-file://vscode-app/c:/VS%20code/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
+}
+.Imgs-perros{
+    width: 30%;
+    margin-left: 10%;
+}
+.Botones_Resultado{
+    margin-top: 25%;
+    padding-right: 40%;
+}
+.menu_respuesta{
+}
