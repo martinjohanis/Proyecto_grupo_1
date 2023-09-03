@@ -153,16 +153,23 @@ font-family: 'Quicksand', sans-serif;
 #Resultado-perruno{
     color: #945019;
     font-family: 'Quicksand', sans-serif;
-    margin-left: 5%;
-    font-size: 70px;vscode-file://vscode-app/c:/VS%20code/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
+    display: grid;
+    place-items: center;
+    font-size: 85px;
 }
 .Imgs-perros{
     width: 30%;
-    margin-left: 10%;
+    margin-left: 35%;
+    display: flex;
 }
 .Botones_Resultado{
-    margin-top: 25%;
-    padding-right: 40%;
+    width:15%;
+    height:40px;
+    margin-top: 30px;
 }
-.menu_respuesta{
+.Letras_botones_mas_informacion{
+    font-size: 100%;
+}
+.titulinho{
+    display: inline;
 }

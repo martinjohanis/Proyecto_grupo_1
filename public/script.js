@@ -55,7 +55,7 @@ submitBtn.addEventListener('click', () => {
     }
     else if(data.resultado == "Weimaraner"){
       html+="<img src ='imagenes/weimaraner.jpg' class='Imgs-perros'>"
-      html+= "<button type='button' class='btn btn-outline-success Botones_Resultado'>Mas informacion</button>"
+      html+= "<button type='button' class='btn btn-outline-success Botones_Resultado'><p class='Letras_botones_mas_informacion'>Mas informacion</p></button>"
     }
     html+="</div>"
     

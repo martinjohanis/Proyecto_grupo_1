@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#body {
+    font-family: Arial, sans-serif;
+    background-color: #ffd0a9;
+    color:#ffd0a9 ;
+}
+header {
+    background-color:  #fcbe8c;
+    color: #945019;
+    padding: 5px 0;
+    border-color: #333;
+    /*border-bottom: 2px solid #333 ;
+    border-top: 2px solid #333 ;
+    border-right: 2px solid #333 ;
+    border-left: 2px solid #333 ;*/
+    border-bottom-right-radius: 30px #333 ;
+    border-top-left-radius: 30px #333;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+    position: sticky;
+   top: 0px;
+    z-index: 9999;
+}
+header h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+   
+   
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #945019;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.mi_nav_link
+{
+    color: #945019 !important;
+}
+.carta-estilo{
+   margin-left: 50px;
+   margin-top: 25px ;
+}
+.menu_perros{
+    display: flex;
+}
+.carta_imagenes_perros{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+.cuerpo_carta{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+.Titulo_perros_menu{
+    color: #945019;
+}
+#Letras_perros{
+font-family: 'Quicksand', sans-serif;
+ text-decoration: none;
+ font-size: 85px ;
+ display: grid;
+ place-items: center;
+}
+.titulinho{
+ display: inline;
+}
