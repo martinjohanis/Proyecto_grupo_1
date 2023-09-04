@@ -86,18 +86,6 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
 
-function guardarRespuestas(respuestas) {
-
-  if (respuestas.length === answerValues.length) {
-    respuestas.forEach((respuestas, index) => {
-      respuestas.push(answerValues[index][respuestas.value]);
-    });
-    // respuestas seleccionadas por el usuario
-  } else {
-    console.log("Debes seleccionar una opción para cada pregunta.");
-  }
-}
-
 function addValues(respuestas) {
   for (let i = 0; i < answerValues.length ; i++) {
    for (let j = 0; j < valUser.length ; j++) {
