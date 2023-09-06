@@ -30,7 +30,6 @@ header h1 {
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
 }
-
 nav ul {
     list-style: none;
     text-align: center;
@@ -53,36 +52,10 @@ nav a {
 .mi_nav_link
 {
     color: #945019 !important;
-}
-.carta-estilo{
-   margin-left: 50px;
-   margin-top: 25px ;
-}
-.menu_perros{
-    display: flex;
-}
-.carta_imagenes_perros{
-    object-fit: cover;
-    width:100%;
-    height:100%;
-}
-.cuerpo_carta{
-    text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
     
 }
-.Titulo_perros_menu{
-    color: #945019;
-}
-#Letras_perros{
-font-family: 'Quicksand', sans-serif;
- text-decoration: none;
- font-size: 85px ;
- display: grid;
- place-items: center;
-}
 .titulinho{
- display: inline;
+    display: inline;
 }
 footer {
     text-align: center;
@@ -93,4 +66,16 @@ footer {
     bottom: 0;
     width: 100%;
    
+}
+.color_texto{
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    
+
+
+}
+.golden_texto{
+  margin-right: 40%;
+  margin-top: 8%;
+  margin-left: 3%;
 }
