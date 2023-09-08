@@ -5,45 +5,49 @@ const port = 3000; // Puerto de la APP Web
 // Perros
 let perro1 = {
   raza: "Golden Retriever",
-  values: [3,3,3,3,3],
+  values: [35,25,25,10,15],
 }
 let perro2 = {
   raza: "Border Collie",
-  values: [-2,-2,-2,-2,-2],
+  values: [25,45,20,40,15],
 }
 let perro3 = {
   raza: "Weimaraner",
-  values: [0,0,0,0,0], 
+  values: [-10,10,20,30,-10], 
 }
-let perros = [perro1, perro2, perro3]//valores perros(perro = [indice.values])
+let perro4 = {
+  raza: "Dachshund",
+  values: [25,40,40,20,-15],
+}
+let perros = [perro1, perro2, perro3, perro4]//valores perros(perro = [indice.values])
 
 let valUser = [0,0,0,0,0]
 
 let answerValues = [
   [ //preg 1
-    [2,1,3,3,2],   //opcion 1
-    [-3,-2,0,2,3],  //opcion 2
-    [2,-2,-1,-2,-3]     //opcion 3
+    [0,0,0,-10,0],   //opcion 1
+    [0,0,0,2,0],  //opcion 2
+    [0,0,0,12,0]     //opcion 3
   ],
   [ //preg 2
-    [2,1,3,3,2],   //opcion 1
-    [-3,-2,0,2,3],  //opcion 2
-    [2,-2,-1,-2,-3]     //opcion 3
+    [-5,6,0,-3,-7],   //opcion 1
+    [-1,0,0,1,2],  //opcion 2
+    [4,-2,0,4,3]     //opcion 3
   ],
   [ //preg 3
-    [2,1,3,3,2],   //opcion 1
-    [-3,-2,0,2,3],  //opcion 2
-    [2,-2,-1,-2,-3]     //opcion 3
+    [0,3,-8,0,-10],   //opcion 1
+    [0,0,-1,0,-2],  //opcion 2
+    [2,-2,5,0,7]     //opcion 3
   ],
   [ //preg 4
-    [2,1,3,3,2],   //opcion 1
-    [-3,-2,0,2,3],  //opcion 2
-    [2,-2,-1,-2,-3]     //opcion 3
+    [-2,3,0,-4,-3],   //opcion 1
+    [0,-2,0,1,1],  //opcion 2
+    [2,-3,-1,4,3]     //opcion 3
   ],
   [ //preg 5
-    [2,1,3,3,2],   //opcion 1
-    [-3,-2,0,2,3],  //opcion 2
-    [2,-2,-1,-2,-3]     //opcion 3
+    [10,3,5,3,2],   //opcion 1
+    [1,0,1,2,3],  //opcion 2
+    [-4,5,-1,7,-3]     //opcion 3
   ]
 ]
 
@@ -56,10 +60,10 @@ app.post('/obtenerPerro', (req, res) => {
 
   var respuestas = req.body
 
-  console.log("chauuu")
+  console.log("check 1")
   console.log(respuestas)
   
-  console.log("hollaaa")
+  console.log("check 2")
 
   /*for(let i = 0; i < valUser.length; i++){
     addValues()
@@ -67,8 +71,12 @@ app.post('/obtenerPerro', (req, res) => {
 
   let resultado = calcularDistancia(perros, addValues(respuestas));
 
-  console.log("tumamam")
+  console.log("check 3")
 
+  console.log(valUser)
+  
+  console.log("check 4")
+  
   console.log(resultado)
 
   const menorDistancia = resultado.subarreglo;
