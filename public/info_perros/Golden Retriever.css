@@ -109,3 +109,21 @@ font-family: 'Quicksand', sans-serif;
 .Menu_posicion{
     display:flex ;
 }
+.luciano
+{
+    background-color: #945019;
+    color: #fcbe8c;
+}
+.colorFondoFuerte{
+    background-color: #945019;
+}
+.colorFondoClaro{
+    background-color: #fcbe8c;
+}
+.colorLetraFuerte{
+    color: #945019;
+}
+.colorLetraClaro{
+    color: #fcbe8c;
+}
+

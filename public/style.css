@@ -173,3 +173,12 @@ font-family: 'Quicksand', sans-serif;
 .titulinho{
     display: inline;
 }
+.luciano
+{
+    background-color: #945019;
+    border-radius: 1ex;
+}
+.luciano a{
+    color: #fcbe8c !important;
+
+}
