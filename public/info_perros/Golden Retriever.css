@@ -70,7 +70,7 @@ footer {
 .Titulo_perros_menu{
     color: #945019;
 }
-#Letras_perros{
+.Letras_perros{
 font-family: 'Quicksand', sans-serif;
  text-decoration: none;
  font-size: 85px ;
@@ -142,12 +142,36 @@ padding-left: 30px;
 
 .letrasAcordion{
     font-family: 'Quicksand', sans-serif;
-    color: #fcbe8c;;
+    color: #fcbe8c;
 
+
+}
+.letrasAcordionactivo{
+    font-family: 'Quicksand', sans-serif;
+    color: #945019;
 
 }
 
 .accordion-header{
 
     color: #945019;
+}
+.Famosos{
+ font-family: 'Quicksand', sans-serif;
+ text-decoration: none;
+ font-size: 40px ;
+ display: grid;
+ place-items: left;
+ margin-left: 30px;
+}
+.celebridad{
+    margin-right: 24px;
+}
+.accordion-button
+{
+    background-color: #945019 !important;
+}
+.accordion-body
+{
+    background-color: #fcbe8c;
 }
