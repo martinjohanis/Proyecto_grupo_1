@@ -69,6 +69,8 @@ nav a {
 .cuerpo_carta{
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
+    background-color: #945019;
+    color: #fcbe8c ;
     
 }
 .Titulo_perros_menu{
@@ -84,7 +86,16 @@ font-family: 'Quicksand', sans-serif;
 .titulinho{
  display: inline;
 }
-footer {
+
+#btncolor{
+
+    background-color:#fcbe8c;
+    color: #945019;
+    border-color: #945019;
+}
+
+footer
+ {
     text-align: center;
     background-color: #fcbe8c;
     color: #945019;
@@ -93,4 +104,13 @@ footer {
     bottom: 0;
     width: 100%;
    
+}
+.luciano
+{
+    background-color: #945019;
+    border-radius: 1ex;
+}
+.luciano a{
+    color: #fcbe8c !important;
+
 }
