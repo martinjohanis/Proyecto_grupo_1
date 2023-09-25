@@ -5,11 +5,11 @@ const port = 3000; // Puerto de la APP Web
 // Perros
 let perro1 = {
   raza: "Golden Retriever",
-  values: [35,25,25,10,15],
+  values: [46,-11,24,57,46],
 }
 let perro2 = {
   raza: "Border Collie",
-  values: [25,45,20,40,15],
+  values: [17,11,20,11,57],
 }
 let perro3 = {
   raza: "Weimaraner",
@@ -19,38 +19,13 @@ let perro4 = {
   raza: "Dachshund",
   values: [25,40,40,20,-15],
 }
+
 let perros = [perro1, perro2, perro3, perro4]//valores perros(perro = [indice.values])
 
 let valUser = [0,0,0,0,0]
 
-let answerValues = [
-  [ //preg 1
-    [0,0,0,-10,0],   //opcion 1
-    [0,0,0,2,0],  //opcion 2
-    [0,0,0,12,0]     //opcion 3
-  ],
-  [ //preg 2
-    [-5,6,0,-3,-7],   //opcion 1
-    [-1,0,0,1,2],  //opcion 2
-    [4,-2,0,4,3]     //opcion 3
-  ],
-  [ //preg 3
-    [0,3,-8,0,-10],   //opcion 1
-    [0,0,-1,0,-2],  //opcion 2
-    [2,-2,5,0,7]     //opcion 3
-  ],
-  [ //preg 4
-    [-2,3,0,-4,-3],   //opcion 1
-    [0,-2,0,1,1],  //opcion 2
-    [2,-3,-1,4,3]     //opcion 3
-  ],
-  [ //preg 5
-    [10,3,5,3,2],   //opcion 1
-    [1,0,1,2,3],  //opcion 2
-    [-4,5,-1,7,-3]     //opcion 3
-  ]
-]
-
+var http = require('http');
+const {answerValues} = require('./respuestas.js');
 
 app.use(express.static(__dirname + "/../public")); // Indica que la carpeta 'public' contiene los archivos estáticos de la aplicación web
 app.use(express.json());  // Indica que se usarán datos en formato JSON en las peticiones
