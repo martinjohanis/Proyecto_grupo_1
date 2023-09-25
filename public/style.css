@@ -139,7 +139,6 @@ footer {
     height: 65%;
     margin-bottom: 11%;
 }
-
 .texto{
 color: #945019;
 font-family: 'Quicksand', sans-serif;
@@ -172,4 +171,13 @@ font-family: 'Quicksand', sans-serif;
 }
 .titulinho{
     display: inline;
+}
+.luciano
+{
+    background-color: #945019;
+    border-radius: 1ex;
+}
+.luciano a{
+    color: #fcbe8c !important;
+
 }

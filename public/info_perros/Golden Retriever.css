@@ -70,7 +70,7 @@ footer {
 .Titulo_perros_menu{
     color: #945019;
 }
-#Letras_perros{
+.Letras_perros{
 font-family: 'Quicksand', sans-serif;
  text-decoration: none;
  font-size: 85px ;
@@ -109,3 +109,98 @@ font-family: 'Quicksand', sans-serif;
 .Menu_posicion{
     display:flex ;
 }
+.luciano
+{
+    background-color: #945019;
+    color: #fcbe8c;
+}
+.colorFondoFuerte{
+    background-color: #945019;
+}
+.colorFondoFuerteAlfa{
+    background-color: rgba(148,80,25, 0.8);
+}
+.colorFondoClaro{
+    background-color: #fcbe8c;
+}
+.colorLetraFuerte{
+    color: #945019;
+}
+.colorLetraClaro{
+    color: #fcbe8c;
+}
+.Acordion{
+width: 200%;
+padding-right: 100px;
+padding-left: 30px;
+
+}
+.Acordion_botones{
+    height: 80px;
+    
+}
+
+.letrasAcordion{
+    font-family: 'Quicksand', sans-serif;
+    color: #fcbe8c;
+
+
+}
+.letrasAcordionactivo{
+    font-family: 'Quicksand', sans-serif;
+    color: #945019;
+
+}
+
+.accordion-header{
+
+    color: #945019;
+}
+.Famosos{
+ font-family: 'Quicksand', sans-serif;
+ text-decoration: none;
+ font-size: 40px ;
+ display: grid;
+ place-items: left;
+ margin-left: 30px;
+}
+.celebridad{
+    margin-right: 24px;
+}
+.accordion-button
+{
+    background-color: #945019 !important;
+ 
+}
+.accordion-body
+{
+    background-color: #fcbe8c;
+    
+}
+.Primera_carta{
+    margin-left: 180px;
+    margin-right: 24px;
+}
+.card-img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+
+.card-title{
+
+    font-family: 'Quicksand', sans-serif;
+    backdrop-filter: blur(5px);
+    color: #fcbe8c;
+}
+
+.luciano
+{
+    background-color: #945019;
+    border-radius: 1ex;
+}
+.luciano a{
+    color: #fcbe8c !important;
+
+}
+
