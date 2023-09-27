@@ -62,7 +62,13 @@ nav a {
 }
 
 .landing h2 {
-    font-size: 24px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #945019;
+    font-family: 'Quicksand', sans-serif;
+}
+.landing p {
+    font-size: 25px;
     margin-bottom: 20px;
     color: #945019;
     font-family: 'Quicksand', sans-serif;
