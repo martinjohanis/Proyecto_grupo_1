@@ -13,14 +13,21 @@ let perro2 = {
 }
 let perro3 = {
   raza: "Weimaraner",
-  values: [-10,10,20,30,-10], 
+  values: [-16,-50,-6,-11,-9], 
 }
 let perro4 = {
   raza: "Dachshund",
-  values: [25,40,40,20,-15],
+  values: [-23,-18,12,0,-8], 
 }
-
-let perros = [perro1, perro2, perro3, perro4]//valores perros(perro = [indice.values])
+let perro5 = {
+  raza: "Bulldog Francés",
+  values: [14,-52,43,-55,33], 
+}
+let perro6 = {
+  raza: "Galgo Ruso",
+  values: [-20,42,3,8,13], 
+}
+let perros = [perro1, perro2, perro3, perro4, perro5, perro6]//valores perros(perro = [indice.values])
 
 let valUser = [0,0,0,0,0]
 
@@ -72,7 +79,7 @@ app.listen(port, () => {
 function addValues(respuestas) {
   for (let i = 0; i < answerValues.length ; i++) {
    for (let j = 0; j < valUser.length ; j++) {
-       valUser[j] += answerValues[i][respuestas[i]-1][j];
+      valUser[j] += answerValues[i][respuestas[i]-1][j];
    }
   }
   return valUser
