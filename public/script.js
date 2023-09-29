@@ -3,6 +3,28 @@ const outputDiv = document.getElementById('output');
 const submitBtn = document.getElementById('submitBtn');
 //const nameInput = document.getElementById('nameInput');
 
+let pregunta =[]
+
+pregunta.push({
+  id:0, "pregunta": "a"
+})
+
+pregunta.push({
+  id:1, "pregunta": "b"
+})
+
+pregunta.push({
+  id:2, "pregunta": "c"
+})
+
+pregunta.push({
+  id:3, "pregunta": "d"
+})
+
+for (let q of pregunta){
+  "<div>${q.pregunta}</div>"
+}
+
   function obtenerResp() {
     var respuestas = [];
     const elements = document.querySelectorAll('input[type="radio"]:checked'); //obtiene todos los elementos del formulario
