@@ -74,47 +74,14 @@ nav a {
     font-family: 'Quicksand', sans-serif;
 }
 
-/*.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}*/
 
-#botonesop1 {
+/*#botonesop1 {
 
     margin-top: 1%;
 
 
-}
+}*/
 
-.btn-group1{
-
-    padding-bottom: 20px;
-
-}
-
-.btn-group2{
-
-    padding-bottom: 20px;    
-
-}
-
-.btn-group3{
-
-    padding-bottom: 20px;    
-
-}.btn-group4{
-
-    padding-bottom: 20px;    
-
-}.btn-group5{
-
-    padding-bottom: 20px;    
-
-}
 
 #submitBtn{
 
@@ -125,7 +92,7 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
     font-family: 'Quicksand', sans-serif;
-
+    margin-top: 30px;
 }
 
 footer {
@@ -187,4 +154,21 @@ font-family: 'Quicksand', sans-serif;
 .luciano a{
     color: #fcbe8c !important;
 
+}
+.preguntas{
+    margin-top: 40px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 2em;
+}
+    
+.botonessize{
+    display: inline;
+
+}
+.Botones{
+/*margin-left: 9.2%;*/
 }
