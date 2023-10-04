@@ -21,9 +21,41 @@ pregunta.push({
   id:3, "pregunta": "d"
 })
 
+let contHtml = "";
+let i = 0
+let j = 0
 for (let q of pregunta){
-  "<div>${q.pregunta}</div>"
+    contHtml+=`<div id="botonesop`+ j++ +`">
+    <div class="btn-group`+ j +`  preguntas" role="group" aria-label="Basic radio toggle button group">`;
+
+    contHtml+=`<div> ${q.pregunta} </div>`;
+    contHtml+=`<div class="contenedor_botones d-flex col-12">
+    <div class="Botones col">
+    <input type="radio" class="btn-check`+ j +` " name="btnradio`+ j +`" id="btnradio`+ i++ +`" value= 1 autocomplete="off">
+    <label> Muy de acuerdo </label>
+    </div>
+
+    <div class="Botones col">
+    <input type="radio" class="btn-check`+ j +` " name="btnradio`+ j +`" id="btnradio`+ i++ +`" value= 2 autocomplete="off">
+    <label> De acuerdo </label>
+    </div> 
+    <div class="Botones col">
+    <input type="radio" class="btn-check`+ j +`" name="btnradio`+ j +`" id="btnradio`+ i++ +`" value= 3 autocomplete="off" checked>
+    <label> Regular/No sé </label>
+    </div>
+    <div class="Botones col">
+    <input type="radio" class="btn-check`+ j +`" name="btnradio`+ j +`" id="btnradio`+ i++ +`" value= 4 autocomplete="off">
+    <label> En desacuerdo </label>
+    </div>
+    <div class="Botones col">
+    <input type="radio" class="btn-check`+ j +`" name="btnradio`+ j +`" id="btnradio`+ i++ +`" value= 5 autocomplete="off">
+    <label> Muy en desacuerdo </label>
+    </div>`;
+    contHtml+=`</div>
+    </div>`;
 }
+
+contpreguntas.innerHTML = contHtml;
 
   function obtenerResp() {
     var respuestas = [];
@@ -73,10 +105,11 @@ submitBtn.addEventListener('click', () => {
 
     html+="</div>"
     
-
-
     document.getElementById("texto1").innerHTML= html
+
   })
+
+
 
   .catch(error => {
     console.error('Error:', error);
