@@ -6,20 +6,106 @@ const submitBtn = document.getElementById('submitBtn');
 let pregunta =[]
 
 pregunta.push({
-  id:0, "pregunta": "a"
+  id:0, "pregunta": "Si escucho a alguien insultar a un ser querido salgo ciegamente a defenderlo, aún sin conocer el contexto"
 })
 
 pregunta.push({
-  id:1, "pregunta": "b"
+  id:1, "pregunta": "Cuando estoy en un lugar desconocido y escucho un ruido raro voy a ver qué es"
 })
 
 pregunta.push({
-  id:2, "pregunta": "c"
+  id:2, "pregunta": "Hago amigos nuevos con regularidad"
 })
 
 pregunta.push({
-  id:3, "pregunta": "d"
+  id:3, "pregunta": "Dedico gran parte de mi tiempo libre a explorar cosas aleatorias que despiertan mi interés"
 })
+
+pregunta.push({
+  id:4, "pregunta": "Ver llorar a otras personas puede hacer que sienta ganas de llorar yo también"
+})
+
+pregunta.push({
+  id:5, "pregunta": "Suelo hacer un plan de reserva para un plan de reserva"
+})
+
+pregunta.push({
+  id:6, "pregunta": "En los actos sociales, rara vez intento presentarme a gente nueva y suelo hablar con los que ya conozc0"
+})
+
+pregunta.push({
+  id:7, "pregunta": "Suelo mantener la calma, incluso bajo mucha presión"
+})
+
+pregunta.push({
+  id:8, "pregunta": "Prefiero terminar por completo un proyecto antes de empezar otro"
+})
+
+pregunta.push({
+  id:9, "pregunta": "Soy muy sentimental"
+})
+
+pregunta.push({
+  id:10, "pregunta": "Me siento cómodo acercandome a alguien que me parece interesante e iniciando una conversación"
+})
+
+pregunta.push({
+  id:11, "pregunta": "No me interesa demasiado discutir las diferentes interpretaciones y análisis de las obras creativas"
+})
+
+pregunta.push({
+  id:12, "pregunta": "Me gusta seguir mas a mi cabeza que a mi corazón"
+})
+
+pregunta.push({
+  id:13, "pregunta": "Suelo preferir hacer lo que quiero en el momento a seguir una rutina diaria concreta"
+})
+
+pregunta.push({
+  id:14, "pregunta": "Rara vez me preocupo por causar una buena impresión a la gente que conozco"
+})
+
+pregunta.push({
+  id:15, "pregunta": "Me gusta participar en actividades de grupo"
+})
+
+pregunta.push({
+  id:16, "pregunta": "Mi felicidad proviene mas de ayudar a los demas que de lograr mis propias metas"
+})
+
+pregunta.push({
+  id:17, "pregunta": " Me interesan tantas cosas que me cuesta elegir que hacer a continuacion"
+})
+
+pregunta.push({
+  id:18, "pregunta": "Evito el liderazgo en grupos"
+})
+
+pregunta.push({
+  id:19, "pregunta": "Prefiero hacer mis tareas antes de permitirme relajarme"
+})
+
+pregunta.push({
+  id:20, "pregunta": "Me gusta ver a la gente discutir"
+})
+
+pregunta.push({
+  id:21, "pregunta": "Tiendo a evitar llamar la atencion"
+})
+
+pregunta.push({
+  id:22, "pregunta": "A menudo termino haciendo las cosas a ultimo momento"
+})
+
+pregunta.push({
+  id:23, "pregunta": "Pierdo la paciencia con la gente que no es tan eficiente como yo"
+})
+
+pregunta.push({
+  id:24, "pregunta": "Rara vez reconsidero las decisiones que tomé"
+})
+
+
 
 let contHtml = "";
 let i = 0
@@ -104,8 +190,10 @@ submitBtn.addEventListener('click', () => {
     html+= `<button type="button" class="btn btn-outline-success Botones_Resultado"  onclick="window.location.href = 'info_perros/` + data.resultado + `.html';">Mas informacion</button>`;
 
     html+="</div>"
+    let carrusel= ""
     
     document.getElementById("texto1").innerHTML= html
+    document.getElementById("carrusel").innerHTML= carrusel
 
   })
 
