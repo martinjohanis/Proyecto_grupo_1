@@ -29,7 +29,7 @@ let perro6 = {
 }
 let perros = [perro1, perro2, perro3, perro4, perro5, perro6]//valores perros(perro = [indice.values])
 
-const db = require('./../database/db');
+const db = require('../database/db');
 
 let valUser = [0,0,0,0,0]
 

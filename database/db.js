@@ -12,7 +12,19 @@ const connection = mysql.createConnection({
 
 // Ejemplo de obtención de saludo desde la base de datos
 // Devuelve un 'promise' que resuelve con el saludo o se rechaza con un error (Eso se maneja en el código del servidor)
-function returnGreetingFromDB() {
+
+connection.connect((error) => {
+  if (error) {
+    console.error('Error connecting to MYSQL database: ', error);
+  } else {
+    console.log('Connected to MYSQL database');
+  }
+});
+
+// cerrar la conexion
+connection.end();
+
+/* function returnGreetingFromDB() {
   return new Promise((resolve, reject) => {
     // Fetching last name from the MySQL database
     connection.query(
@@ -29,4 +41,4 @@ function returnGreetingFromDB() {
 // Exporta las funciones que se quieran usar desde otros archivos
 module.exports = {
   returnGreetingFromDB,
-};
+};      */
