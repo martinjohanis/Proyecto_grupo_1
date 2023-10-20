@@ -30,6 +30,7 @@ let perro6 = {
 let perros = [perro1, perro2, perro3, perro4, perro5, perro6]//valores perros(perro = [indice.values])
 
 const db = require('../database/db');
+//const db = require('./../database/db');
 
 let valUser = [0,0,0,0,0]
 
@@ -40,7 +41,7 @@ app.use(express.static(__dirname + "/../public")); // Indica que la carpeta 'pub
 app.use(express.json());  // Indica que se usarán datos en formato JSON en las peticiones
 
 // Ruta para obtener el saludo, recibe el nombre en el body de la petición y devuelve el saludo en formato JSON
-app.post('/obtenerPerro', (req, res) => { 
+app.post('/obtenerPerro', (req, res) => {
 
   var respuestas = req.body
 
@@ -72,7 +73,7 @@ app.post('/obtenerPerro', (req, res) => {
   valUser = [0,0,0,0,0];
 
    
-  db.returnGreetingFromDB()
+ db.returnGreetingFromDB()
 
     .then((greeting) => {
       if (greeting) {

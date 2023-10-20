@@ -172,3 +172,25 @@ input[type=radio] {
 .Botones{
 /*margin-left: 9.2%;*/
 }
+
+.btn-outline-success{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #945019;;
+    color: #fcbe8c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 30px;
+    border: 2ex #945019;
+}
+
+.btn-outline-success:hover{
+
+    background-color: #945100;
+    color: #fcbe8c;
+    
+
+
+}
+
