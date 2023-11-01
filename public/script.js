@@ -178,16 +178,45 @@ submitBtn.addEventListener('click', () => {
   })
   .then(res => res.json())
   .then(data => {
-    console.log("Tu perro elegido ha sido: "+data.resultado)
+    console.log("Sos un: "+data.resultado.perro)
     let html =""
     html+="<div class='menu_respuesta'>"
     html +="<div id='Resultado-perruno'>"
-    html+="Tu perro es "
-    html+=data.resultado
+    html+="Sos un "
+    html+=data.resultado.perro
     html +="</div>"
     
-    html+=`<img src ="imagenes/` + data.resultado + `.jpg" class="Imgs-perros">`;
-    html+= `<button type="button" class="btn btn-outline-success Botones_Resultado"  onclick="window.location.href = 'info_perros/` + data.resultado + `.html';">Mas informacion</button>`;
+    html+=`<img src ="imagenes/` + data.resultado.perro + `.jpg" class="Imgs-perros">`;
+    html+= `<button type="button" class="btn btn-outline-success Botones_Resultado"  onclick="window.location.href = 'info_perros/` + data.resultado.perro + `.html';">Mas informacion</button>`;
+    
+    html+="<div class='menu_respuesta'>"
+    html +="<div id='Resultado-humano'>"
+    html+="Stats tuyas: "
+    html+=" Afecto: "
+    html+=data.resultado.valoresUsuario[0]
+    html+=" Inteligencia: "
+    html+=data.resultado.valoresUsuario[1]
+    html+=" Lealtad: "
+    html+=data.resultado.valoresUsuario[2]
+    html+=" Energía: "
+    html+=data.resultado.valoresUsuario[3]
+    html+=" Valentía: "
+    html+=data.resultado.valoresUsuario[4]
+    html +="</div>"
+
+    html+="Stats perro: "
+    html+=" Afecto: "
+    html+=data.resultado.subarreglo[0]
+    html+=" Inteligencia: "
+    html+=data.resultado.subarreglo[1]
+    html+=" Lealtad: "
+    html+=data.resultado.subarreglo[2]
+    html+=" Energía: "
+    html+=data.resultado.subarreglo[3]
+    html+=" Valentía: "
+    html+=data.resultado.subarreglo[4]
+    html +="</div>"
+    html +="</div>"
 
     html+="</div>"
     let carrusel= ""

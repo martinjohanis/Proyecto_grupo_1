@@ -5,7 +5,7 @@ const port = 3000; // Puerto de la APP Web
 // Perros
 let perro1 = {
   raza: "Golden Retriever",
-  values: [46,-11,24,57,46],
+  values: [46,-11,24,57,46],  /*afecto, inteligencia, lealtad, energia, valentia*/
 }
 let perro2 = {
   raza: "Border Collie",
@@ -62,12 +62,14 @@ app.post('/obtenerPerro', (req, res) => {
   
   console.log("check 4")
   
-  console.log(resultado)
+  
 
   const menorDistancia = resultado.subarreglo;
   const perroMenorDistancia = resultado.perro;
 
-  res.json({ resultado: resultado.perro });
+  console.log(resultado)
+
+  res.json({ resultado: resultado });
 
   respuestas = 0;
   valUser = [0,0,0,0,0];
@@ -122,5 +124,5 @@ function calcularDistancia(perros, valUser) {  // calcula las distancias entre c
   // encuentra el subarreglo con el numero mas bajo en las sumas de distancias
   let menorDistancia = perros[indiceMenorDistancia].values;
   let perroMenorDistancia = perros[indiceMenorDistancia].raza;
-  return { subarreglo: menorDistancia, perro: perroMenorDistancia };
+  return { subarreglo: menorDistancia, perro: perroMenorDistancia, valoresUsuario: valUser};
 }
