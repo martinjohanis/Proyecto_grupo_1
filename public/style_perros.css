@@ -55,11 +55,13 @@ nav a {
     color: #945019 !important;
 }
 .carta-estilo{
-   margin-left: 50px;
+   margin-left: 5%;
    margin-top: 25px ;
+   margin-right: 5%;
 }
 .menu_perros{
     display: flex;
+    justify-content: space-between;
 }
 .carta_imagenes_perros{
     object-fit: cover;
@@ -113,4 +115,14 @@ footer
 .luciano a{
     color: #fcbe8c !important;
 
+}
+.Redes_sociales{
+    display: flex;
+    justify-content: center;
+}
+.Redes{
+    width: 2.5%;
+    height: 2.5%;
+    border-radius: 20px;
+    margin-left: 6px;
 }
